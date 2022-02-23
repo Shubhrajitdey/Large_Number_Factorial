@@ -36,26 +36,14 @@ class LargeFactorial {
                 }
             }
             if(j==arrList.size() && carry!=0){
-                System.out.println("j "+i);
-                System.out.println("carry "+carry);
-                /*int number = carry;
-                int reverse =0;
-                while(number != 0)   {  
-                    int remainder = number % 10;  
-                    reverse = reverse * 10 + remainder;  
-                    number = number/10;  
-                }
-                //System.out.println("reverse carry "+reverse);
-                while(reverse != 0)   {  
-                    int finalcarry = reverse % 10;  
-                    reverse = reverse/10; 
-                    number = number/10;
+                //System.out.println("j "+i);
+                while(carry != 0)   {  
+                    int finalcarry = carry % 10;  
+                    carry = carry/10; 
                     arrList.add(finalcarry);  
-                }*/
-                arrList.add(carry);  
-                carry =0;
+                }
             }
-            //System.out.println(arrList);
+           // System.out.println(arrList);
         }
         
         int arrfinal[] = new int[arrList.size()];
@@ -65,6 +53,4 @@ class LargeFactorial {
         }
         return arrfinal;
     }
-
-
 }
